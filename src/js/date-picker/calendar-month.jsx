@@ -44,6 +44,7 @@ var CalendarMonth = React.createClass({
         <DayButton
           key={i}
           date={day}
+          onClick={this._handleDayClick.bind(null, day)}
           onTouchTap={this._handleDayTouchTap}
           selected={selected} />
       );
@@ -52,6 +53,10 @@ var CalendarMonth = React.createClass({
 
   _handleDayTouchTap: function(e, date) {
     if (this.props.onDayTouchTap) this.props.onDayTouchTap(e, date);
+  },
+  
+  _handleDayClick: function(date, e) {
+    if (this.props.onDayClick) this.props.onDayClick(e, date);
   }
 
 });
