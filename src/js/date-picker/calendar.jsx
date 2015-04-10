@@ -82,6 +82,7 @@ var Calendar = React.createClass({
             <CalendarMonth
               key={this.state.displayDate.toDateString()}
               displayDate={this.state.displayDate}
+              onDayClick={this._handleDayTouchTap}
               onDayTouchTap={this._handleDayTouchTap}
               selectedDate={this.state.selectedDate} />
           </SlideInTransitionGroup>
