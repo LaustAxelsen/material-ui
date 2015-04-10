@@ -39,11 +39,13 @@ var DatePickerDialog = React.createClass({
         key={0}
         label="Cancel"
         secondary={true}
+        onClick={this.dismiss}
         onTouchTap={this._handleCancelTouchTap} />,
       <FlatButton
         key={1}
         label="OK"
         secondary={true}
+        onClick={this.dismiss}
         onTouchTap={this._handleOKTouchTap} />
     ];
 
